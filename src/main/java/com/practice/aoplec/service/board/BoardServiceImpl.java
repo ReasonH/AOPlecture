@@ -1,4 +1,4 @@
-package com.practice.aoplec.service;
+package com.practice.aoplec.service.board;
 
 import com.practice.aoplec.domain.board.Board;
 import com.practice.aoplec.domain.board.BoardRepository;
@@ -8,11 +8,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BoardService {
-    @Autowired
-    private BoardRepository boardRepository;
+public class BoardServiceImpl implements BoardService {
 
+    @Autowired
+    private BoardRepository repository;
+
+    @Override
     public List<Board> getBoards() {
-        return boardRepository.findAll();
+        return repository.findAll();
     }
 }

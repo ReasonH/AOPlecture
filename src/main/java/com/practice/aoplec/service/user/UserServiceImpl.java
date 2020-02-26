@@ -1,4 +1,4 @@
-package com.practice.aoplec.service;
+package com.practice.aoplec.service.user;
 
 import com.practice.aoplec.domain.user.User;
 import com.practice.aoplec.domain.user.UserRepository;
@@ -8,10 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserService {
+public class UserServiceImpl implements UserService {
+
     @Autowired
     private UserRepository userRepository;
 
+    @Override
     public List<User> getUsers() {
         return userRepository.findAll();
     }
