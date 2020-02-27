@@ -15,11 +15,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 class AoplecApplicationTests {
 
     @Autowired
-    private UserService userService;
+    private BoardService boardService;
 
     @Test
     public void findBoards() throws Exception {
-        assertThat(userService.getUsers().size()).isEqualTo(100);
+        assertThat(boardService.getBoards().size()).isEqualTo(100);
     }
 
 }
